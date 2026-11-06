@@ -5,79 +5,95 @@ permalink: /research/
 author_profile: true
 ---
 
-I am interested in a broad range of topics at the intersection of accretion physics, galaxy formation, and AGN-Galaxy co-evolution. I try to work at the interface between of theory and observations, emphasizing tests of theoretical predictions with observational data. 
+{% include base_path %}
 
+<p>I am interested in how supermassive black holes and their host galaxies grow together, from the physics of the inner accretion disk to the gas in the circumgalactic medium. I combine high-energy (X-ray) spectroscopy and timing with optical and near-infrared integral-field spectroscopy, and I write software that makes these data easier to use.</p>
 
+<!-- ============================================================ -->
+<h2 id="cgm">The circumgalactic medium of AGN at cosmic noon</h2>
 
- <!-- Below is a recording of a recent (virtual) talk I gave at the Princeton summer colloquium in August 2020.
+<div class="callout">
+  <div class="callout__title"><span class="status ongoing">Ongoing</span> Thesis project</div>
+  <p>At z ~ 2&ndash;3, galaxies and black holes are growing fastest, and the CGM is where inflows, outflows and feedback leave their mark. I am using deep <b>Keck/KCWI</b> integral-field spectroscopy and <b>Keck/MOSFIRE</b> near-infrared spectroscopy from the Keck Baryonic Structure Survey (KBSS) to map extended Ly&alpha; nebulae around a range of AGN: type-1 and type-2 AGN, optically faint QSOs, and hyperluminous QSOs.</p>
+  <p>The main question is whether the size, brightness and kinematics of the CGM are set by current black hole activity or by the properties of the host galaxy. A paper is in preparation.</p>
+</div>
 
-<br>
-<img src="/images/wordcloud.png" alt="" width="600" height="300">
-<br>
+<!-- ============================================================ -->
+<h2 id="mergers">Galaxy mergers and hidden black holes</h2>
 
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/K3T60D3wSzo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<br>
+<div class="research-block">
+  <figure class="research-block__fig">
+    <img src="{{ base_path }}/images/research/ugc2369s_multiwavelength.jpg" alt="Multiwavelength images of UGC 2369S" loading="lazy">
+    <figcaption>UGC 2369S across wavelengths: HST ACS/NICMOS (top), MUSE [O&nbsp;III] and H&alpha;, and VLA 33&nbsp;GHz (bottom). Three cores are visible about 3&nbsp;kpc apart. From <a href="https://doi.org/10.3847/1538-4357/ae5643">Ding et al. 2026</a>.</figcaption>
+  </figure>
+  <div class="research-block__text">
+    <span class="status published">Published &middot; ApJ 2026</span>
+    <p>Triple mergers of massive galaxies are a natural step in hierarchical galaxy assembly, and they may produce triple black hole systems that emit gravitational waves. Few have been confirmed. In <a href="https://doi.org/10.3847/1538-4357/ae5643"><b>UGC 2369S</b></a>, a nearby luminous infrared galaxy, I combined Chandra X-ray, Keck/OSIRIS adaptive-optics, Keck/KCWI, VLT/MUSE, VLA and HST data to study one of the clearest kpc-scale triple-nucleus systems known.</p>
+    <p>The northern core probably hosts the most massive black hole (M<sub>BH</sub> ~ 10<sup>8</sup> M<sub>&#9737;</sub>). It fits a <b>heavily obscured AGN</b> (A<sub>V</sub> &gt; 5, N<sub>H</sub> &#8819; 10<sup>25</sup> cm<sup>-2</sup>), but the identification is not yet conclusive. The two other cores show tidal disruption, and the changing three-body potential seems to have stripped the stellar bulge of the southwestern core.</p>
+    <p><span class="status ongoing">Ongoing</span> I am following this up with spatially resolved stellar-population fitting (pPXF/GIST with a hierarchical, CAPIVARA-style spatial binning) of the KCWI cube.</p>
+  </div>
+</div>
 
-Below, I group my published papers by broad topic. 
- 
-<h2>Binary Stars</h2> 
-<a href="https://arxiv.org/abs/2101.05282">A million binaries from Gaia eDR3: sample selection and validation of Gaia parallax uncertainties</a>
-<br><a href="https://arxiv.org/abs/2101.02707">TOI-1259Ab -- a gas giant planet with 2.7% deep transits and a bound white dwarf companion</a>
-<br><a href="https://arxiv.org/abs/2008.10637">Data-driven spectroscopic estimates of absolute magnitude, distance and binarity -- method and catalog of 16,002 O- and B-type stars from LAMOST</a>
-<br><a href="https://arxiv.org/abs/2006.11974">A stripped-companion origin for Be stars: clues from the putative black holes HR 6819 and LB-1</a>
-<br><a href="https://arxiv.org/abs/1912.04185">Not so fast: LB-1 is unlikely to contain a 70 Msun black hole</a>
-<br><a href="https://arxiv.org/abs/1906.10128">Discovery of an equal-mass "twin'' binary population reaching 1000+ AU separations</a>
-<br><a href="https://arxiv.org/abs/1810.13397">The geometric challenge of testing gravity with wide binaries</a>
-<br><a href="https://arxiv.org/abs/1809.06860">The wide binary fraction of solar-type stars: emergence of metallicity dependence at a < 200 au</a>
-<br><a href="https://arxiv.org/abs/1807.06011">Imprints of white dwarf recoil in the separation distribution of Gaia wide binaries</a>
-<br><a href="https://arxiv.org/abs/1711.08793">Discovery and characterization of 3000+ main-sequence binaries from APOGEE spectra</a>
-<br><a href="https://arxiv.org/abs/1912.08895">Identical or fraternal twins?: The chemical homogeneity of wide binaries from Gaia DR2</a>
-<br><a href="https://arxiv.org/abs/1909.04765">The separation distribution of ultra-wide binaries across Galactic populations</a>
-<br><a href="https://arxiv.org/abs/2002.09496">From birth associations to field stars: mapping the small-scale orbit distribution in the Galactic disc</a>
-<br><a href="https://arxiv.org/abs/2007.10990">Spatial and kinematic clustering of stars in the Galactic disk</a>
+<!-- ============================================================ -->
+<h2 id="reflection">X-ray reflection and the inner accretion disk</h2>
 
-<br> 
+<div class="research-block reverse">
+  <figure class="research-block__fig">
+    <img src="{{ base_path }}/images/research/xillver_highdensity.jpg" alt="XILLVER reflection spectra at different densities" loading="lazy">
+    <figcaption>Reflection spectra at disk densities of 10<sup>15</sup>, 10<sup>19</sup> and 10<sup>22</sup> cm<sup>-3</sup>. The right panels zoom in on the Fe K band. From <a href="https://doi.org/10.3847/1538-4357/ad76a1">Ding et al. 2024</a>.</figcaption>
+  </figure>
+  <div class="research-block__text">
+    <span class="status published">Published &middot; ApJ 2024</span>
+    <p>The X-ray spectra of accreting black holes carry a reflection signature (the Fe K line and the Compton hump) that encodes black hole spin, disk inclination and the geometry of the corona. Disks around black holes can reach densities of 10<sup>15</sup>&ndash;10<sup>22</sup> cm<sup>-3</sup>, where plasma effects matter, but most reflection models have ignored them.</p>
+    <p>With J. García, T. Kallman and collaborators, I <a href="https://doi.org/10.3847/1538-4357/ad76a1">added high-density corrections</a> to the atomic rates in <b>XSTAR</b> and the <b>XILLVER</b> reflection model. Modified recombination rates cause most of the change. Dense disks can produce strong Fe and O resonance features even when highly ionized, which could explain the <b>supersolar iron abundances</b> reported for many sources.</p>
+  </div>
+</div>
 
-<h2>Dwarf galaxies</h2>
-<a href="https://arxiv.org/abs/1801.03933">Gas kinematics in FIRE simulated galaxies compared to spatially unresolved HI observations</a>
-<br><a href="https://arxiv.org/abs/1705.10321">Gas kinematics, morphology and angular momentum in the FIRE simulations</a>
-<br><a href="https://arxiv.org/abs/1610.04232">When the Jeans do not fit: How stellar feedback drives stellar kinematics and complicates dynamical modeling in low-mass galaxies</a>
-<br><a href="https://arxiv.org/abs/1512.01235">Breathing FIRE: How stellar feedback drives radial migration, rapid size fluctuations, and population gradients in low-mass galaxies</a>
-<br><a href="https://arxiv.org/abs/1711.04788">The origin of ultra diffuse galaxies: stellar feedback and quenching</a>
-<br><a href="https://arxiv.org/abs/1907.02979">Dark and luminous satellites of LMC-mass galaxies in the FIRE simulations</a>
-<br><a href="https://arxiv.org/abs/1903.10515">Star formation histories of dwarf galaxies in the FIRE simulations: dependence on mass and Local Group environment</a>
-<br><a href="https://arxiv.org/abs/1902.01401">AGN all the way down? AGN-like line ratios are common in the lowest-mass isolated quiescent galaxies</a>
-<br><a href="https://arxiv.org/abs/1801.06187">No assembly required: mergers are mostly irrelevant for the growth of low-mass dwarf galaxies</a>
-<br><a href="https://arxiv.org/abs/1811.11791">Dwarf galaxies in CDM, WDM, and SIDM: Disentangling baryons and dark matter physics</a>
-<br><a href="https://arxiv.org/abs/1809.06380">A closer look at bursty star formation with LHα and LUV distributions</a>
-<br><a href="https://arxiv.org/pdf/1811.11768.pdf">The OSIRIS Lens-amplified Survey (OLAS). I. Dynamical effects of stellar feedback in low-mass galaxies at z∼2</a>
-<br><a href="https://arxiv.org/abs/2001.00590">Effects of stellar feedback on stellar and gas kinematics of star-forming galaxies at z=0.6-1.0</a>
-<br><a href="https://arxiv.org/abs/2010.13606">Probing the CGM of low-redshift dwarf galaxies using FIRE simulations</a>
-<br><a href="https://arxiv.org/abs/2009.01241">A relationship between stellar metallicity gradients and galaxy age in dwarf galaxies</a>
-<br><a href="https://arxiv.org/abs/2008.08582">The time-scales probed by star formation rate indicators for realistic, bursty star formation histories from the FIRE simulations
-<br><a href="https://arxiv.org/abs/2004.10817">A dark matter profile to model diverse feedback-induced core sizes of LCDM halos
-</a>
+<div class="research-block narrow">
+  <figure class="research-block__fig">
+    <img src="{{ base_path }}/images/research/blr_disk_inclination.jpg" alt="BLR inclination vs. disk inclination" loading="lazy">
+    <figcaption>Broad-line-region inclination from reverberation mapping compared with inner-disk inclination from X-ray reflection. From <a href="https://doi.org/10.3847/1538-4357/addec8">Du, Ho, Ding &amp; Li 2025</a>.</figcaption>
+  </figure>
+  <div class="research-block__text">
+    <p><b>How reliable are reflection-based inclinations?</b> With R. Du, L. Ho and R. Li, we used multi-epoch XMM-Newton + NuSTAR data and mock spectra to show that broadband reflection spectroscopy can recover the inner-disk inclination, especially when reflection is strong (<a href="https://doi.org/10.3847/1538-4357/ad245c">Du et al. 2024</a>). We then compared these inclinations with broad-line-region inclinations from velocity-resolved reverberation mapping. The two are strongly correlated, with a nearly linear relation that suggests the <b>BLR is aligned with the accretion disk</b> (<a href="https://doi.org/10.3847/1538-4357/addec8">Du et al. 2025</a>).</p>
+    <p>I also apply these models to black hole X-ray binaries, for example the NuSTAR + NICER reflection spectrum of <a href="https://doi.org/10.3847/1538-4357/ad82e9">MAXI J1803&minus;298</a>.</p>
+  </div>
+</div>
 
-<br>
+<!-- ============================================================ -->
+<h2 id="outflows">Super-Eddington accretion and AGN outflows</h2>
 
-<h2>Cosmological simulations of Milky Way-like galaxies</h2>  
-<a href="https://arxiv.org/abs/1804.00659">Where are the most ancient stars in the Milky Way?</a>
-<br><a href="https://arxiv.org/abs/2001.03178">Growing pains: The formation times and building blocks of Milky Way-mass galaxies in the FIRE simulations</a>
-<br><a href="https://arxiv.org/abs/1904.11508">A profile in FIRE: resolving the radial distributions of satellite galaxies in the Local Group with simulations</a>
-<br><a href="https://arxiv.org/abs/1910.01123">The fates of the circumgalactic medium in the FIRE simulations</a>
-<br><a href="https://arxiv.org/abs/1811.11753">The origins of the circumgalactic medium in the FIRE simulations</a>
-<br><a href="https://arxiv.org/abs/1805.12199">Formation, vertex deviation, and age of the Milky Way's bulge: input from a cosmological simulation with a late-forming bar</a>
-<br><a href="https://arxiv.org/abs/1712.03966">The origin of the diverse morphologies and kinematics of Milky Way-mass galaxies in the FIRE-2 simulations</a>
-<br><a href="https://arxiv.org/abs/1707.07010">How to model supernovae in simulations of star and galaxy formation</a>
-<br><a href="https://arxiv.org/abs/2006.13976">Virialization of the inner CGM in the FIRE simulations and implications for galaxy discs, star formation and feedback</a>
+<div class="research-block reverse">
+  <figure class="research-block__fig">
+    <img src="{{ base_path }}/images/research/izw1_outflows.jpg" alt="Outflow velocity vs ionization parameter in I Zw 1" loading="lazy">
+    <figcaption>Outflow velocity versus ionization parameter for the winds detected in I Zw 1. The fitted &xi; &prop; v<sup>3.24</sup> scaling matches a super-Eddington wind. From <a href="https://doi.org/10.3847/1538-4357/ac6955">Ding et al. 2022</a>.</figcaption>
+  </figure>
+  <div class="research-block__text">
+    <span class="status published">Published &middot; ApJ 2022</span>
+    <p>Using a long simultaneous XMM-Newton + NuSTAR campaign on the narrow-line Seyfert 1 <a href="https://doi.org/10.3847/1538-4357/ac6955"><b>I Zwicky 1</b></a>, I followed a series of X-ray flares as they happened. The corona cooled from ~200 to ~15 keV during the flare, likely because of runaway pair production in a compact, disk-like corona.</p>
+    <p>I found several variable, blueshifted absorbers (ionized winds and <b>ultrafast outflows</b>), one of which may have been launched just after the flare. Their ionization and velocity follow the relation expected for a super-Eddington wind. Their momentum-driven feedback can explain why the black hole in I Zw 1 is <b>undermassive</b> relative to its host bulge.</p>
+  </div>
+</div>
 
-<br>
+<!-- ============================================================ -->
+<h2 id="smbhb">Supermassive black hole binaries in blazars</h2>
 
-<h2>Other potpourri</h2>  
-<a href="https://arxiv.org/abs/1902.09547">Evolution of supernovae-driven superbubbles with conduction and cooling</a>
-<br><a href="https://arxiv.org/abs/1805.03652">The formation and hierarchical assembly of globular cluster populations</a>
-<br><a href="https://arxiv.org/abs/1805.05849">An empirical measurement of the initial-final mass relation with Gaia white dwarfs </a>
-<br><a href="https://arxiv.org/abs/1701.02347">The statistical challenge of constraining the low-mass IMF in Local Group dwarf galaxies</a>
--->
+<div class="research-block">
+  <figure class="research-block__fig">
+    <img src="{{ base_path }}/images/research/pks2131_sinusoid.jpg" alt="Sinusoidal light curves of PKS 2131-021" loading="lazy">
+    <figcaption>PKS 2131&minus;021 light curves from radio to optical, all following the same ~4.7 yr sinusoid, with phase changing steadily with frequency. From <a href="https://doi.org/10.3847/1538-4357/adc567">Kiehlmann et al. 2025</a>.</figcaption>
+  </figure>
+  <div class="research-block__text">
+    <p>As part of the OVRO 40m blazar monitoring collaboration led by A. Readhead, I work on blazars whose light curves vary sinusoidally, a possible sign of a <b>supermassive black hole binary</b>. <a href="https://doi.org/10.3847/1538-4357/adc567">PKS 2131&minus;021</a> shows coherent sinusoidal variations from radio to optical frequencies, and <a href="https://doi.org/10.3847/1538-4357/addc60">PKS J0805&minus;0111</a> is a second highly significant case. I bring the X-ray side to this work: how the high-energy emission behaves along the binary orbit.</p>
+  </div>
+</div>
 
+<!-- ============================================================ -->
+<h2 id="xrb">Neutron star X-ray binaries (undergraduate work)</h2>
+
+<div class="fig-pair">
+  <img src="{{ base_path }}/images/research/gx301_crsf.jpg" alt="Cyclotron line energy vs luminosity in GX 301-2" loading="lazy">
+  <img src="{{ base_path }}/images/research/4u0115_wavelet.jpg" alt="Wavelet spectrum of 4U 0115+63" loading="lazy">
+</div>
+
+<p>At Wuhan University, working with Prof. Wei Wang, I studied accreting X-ray pulsars with <b>Insight-HXMT</b>. In the high-mass X-ray binary <a href="https://doi.org/10.1093/mnras/stab1862">GX 301&minus;2</a> (left), I found two cyclotron resonant scattering features that track luminosity, rising below ~10<sup>37</sup> erg s<sup>-1</sup> and falling above it. This implies a surface field of ~10<sup>13</sup> G. For <a href="https://doi.org/10.1093/mnras/stab835">4U 0115+63</a> (right), I brought wavelet analysis to HXMT timing and found mHz quasi-periodic oscillations. Related work covers <a href="https://doi.org/10.1093/mnras/stae1071">GX 301&minus;2 as a nearly orthogonal rotator</a>, <a href="https://doi.org/10.1093/mnras/stac1520">Vela X-1</a>, <a href="https://doi.org/10.1093/mnras/stac1175">MAXI J1535&minus;571</a> and <a href="https://doi.org/10.3847/1538-4357/ac1268">GRO J1008&minus;57</a>.</p>

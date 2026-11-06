@@ -1,27 +1,82 @@
 ---
 permalink: /
-title: "Hello!"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
-I am a fourth-year Ph.D. candidate in Astrophysics at the California Institute of Technology (Caltech). Co-advised by Prof. Charles Steidel and Prof. Fiona A. Harrison, my research primarily investigates the circumgalactic medium (CGM) and active galactic nuclei (AGN) host galaxies at redshifts 2–4.
 
-My observational work relies heavily on extensive optical and near-infrared spectroscopy. Utilizing Keck time with integral field spectrograph (KCWI), alongside archival HST and JWST data, my recent research explores the driving mechanisms behind galactic evolution. 
-%My latest work demonstrates that at redshift 2–4, the CGM is more closely correlated with the host galaxies' stellar mass rather than direct supermassive black hole (SMBH) activity, leading to new investigations into whether black hole feedback is more effective at higher redshifts.
+{% include base_path %}
 
-In addition to my observational campaigns, I improve and build tools for the astronomical community including the KCWIKit/KCWIDRP. More recently, I am involved in the development of the SED fitting and image decomposition tool GalfitS, a Python-based software suite that leverages high-performance libraries like JAX for just-in-time compilation and MCMC uncertainty estimation
+<div class="hero">
+  <p class="hero__kicker">Ph.D. candidate &middot; Caltech Astronomy</p>
+  <h2 class="hero__title">Black holes, their host galaxies, and the gas around them</h2>
+  <p>I am a fifth-year Ph.D. candidate in Astrophysics at Caltech, co-advised by <b>Prof. Charles Steidel</b> and <b>Prof. Fiona Harrison</b>. I use X-ray, optical and near-infrared spectroscopy to study how accreting supermassive black holes shape their environments, from the inner accretion disk out to the circumgalactic medium (CGM).</p>
+  <div class="tag-row">
+    <span class="tag">AGN &amp; CGM at z ~ 2&ndash;3</span>
+    <span class="tag">Keck / KCWI &amp; MOSFIRE</span>
+    <span class="tag">Galaxy mergers</span>
+    <span class="tag">X-ray reflection</span>
+    <span class="tag">AGN outflows</span>
+  </div>
+</div>
 
-My scientific interest has shifted significantly in recent years. I have publish first-author paper in the following topics:
+My current work centers on the **CGM of AGN at cosmic noon**. I use deep Keck/KCWI integral-field and Keck/MOSFIRE spectroscopy from the Keck Baryonic Structure Survey (KBSS) to map extended Ly&alpha; nebulae around type-1 and type-2 AGN, optically faint QSOs, and hyperluminous QSOs. The goal is to see how much of the gas around a galaxy is set by its black hole and how much by the galaxy itself. I also draw on archival HST and JWST imaging.
 
-Observational Mergers: Identifying a genuine kpc-scale triplet merger system in UGC 2369S and confirming the presence of an obscured AGN within the interacting galaxy cores.
+<!-- My latest work demonstrates that at redshift 2–4, the CGM is more closely correlated with the host galaxies' stellar mass rather than direct supermassive black hole (SMBH) activity, leading to new investigations into whether black hole feedback is more effective at higher redshifts. -->
 
-Building Accretion Disk X-ray Reflection Model
+I also build tools for the community. I contribute to the [KcwiKit](https://github.com/yuguangchen1/KcwiKit) KCWI post-processing package (frame and blue/red channel cross-alignment, sky-level matching) and to [KSkyWizard](https://github.com/zhuyunz/KSkyWizard). I am also involved in developing [GalfitS](https://ruancunli.github.io/GalfitS/), a JAX-accelerated tool that jointly fits multi-band images and SEDs.
 
-X-Ray Outflows and Super-Eddington AGN in local universe: Analyzing X-ray flares in the super-Eddington active nucleus of I Zwicky 1 to detect multiple variable, blueshifted absorption features associated with ultrafast, ionized winds.
+## Research highlights
 
-Contact Me
-======
-yding@caltech.edu
+<div class="card-grid card-grid--2">
+  <a class="card card__link" href="{{ base_path }}/research/#mergers">
+    <div class="card__img dark" style="background-image:url('{{ base_path }}/images/research/ugc2369s_hst.jpg')"></div>
+    <div class="card__body">
+      <div class="card__label">Galaxy mergers &middot; 2026</div>
+      <div class="card__title">A kpc-scale triple merger in UGC 2369S</div>
+      <p class="card__text">Multiwavelength study of three nuclei about 3 kpc apart, one of which may host a heavily obscured AGN.</p>
+    </div>
+  </a>
+  <a class="card card__link" href="{{ base_path }}/research/#reflection">
+    <div class="card__img" style="background-image:url('{{ base_path }}/images/research/xillver_highdensity.jpg')"></div>
+    <div class="card__body">
+      <div class="card__label">Accretion physics &middot; 2024</div>
+      <div class="card__title">High-density X-ray reflection models</div>
+      <p class="card__text">Plasma effects in XSTAR/XILLVER strengthen Fe K and O resonance features from dense disks.</p>
+    </div>
+  </a>
+  <a class="card card__link" href="{{ base_path }}/research/#outflows">
+    <div class="card__img" style="background-image:url('{{ base_path }}/images/research/izw1_outflows.jpg')"></div>
+    <div class="card__body">
+      <div class="card__label">AGN feedback &middot; 2022</div>
+      <div class="card__title">Super-Eddington winds in I Zw 1</div>
+      <p class="card__text">Variable ultrafast outflows launched during an X-ray flare follow &xi; &prop; v<sup>3.24</sup>.</p>
+    </div>
+  </a>
+  <a class="card card__link" href="{{ base_path }}/research/#smbhb">
+    <div class="card__img" style="background-image:url('{{ base_path }}/images/research/pks2131_sinusoid.jpg')"></div>
+    <div class="card__body">
+      <div class="card__label">Black hole binaries &middot; 2025</div>
+      <div class="card__title">Sinusoidal blazars as SMBH binaries</div>
+      <p class="card__text">Coherent radio-to-optical periodicity in PKS 2131&minus;021 points to a supermassive black hole binary.</p>
+    </div>
+  </a>
+</div>
+
+## News
+
+<ul class="news">
+  <li><span class="news__date">Ongoing</span> Writing up the KBSS/KCWI study of extended Ly&alpha; nebulae and the CGM around AGN at z ~ 2&ndash;3.</li>
+  <li><span class="news__date">May 2026</span> <a href="https://doi.org/10.3847/1538-4357/ae5643">UGC 2369S triple-merger paper</a> published in ApJ.</li>
+  <li><span class="news__date">Jul 2025</span> Two co-authored papers out: <a href="https://doi.org/10.3847/1538-4357/addec8">BLR vs. accretion-disk inclination</a> and the <a href="https://doi.org/10.3847/1538-4357/addc60">sinusoidal blazar PKS J0805&minus;0111</a>.</li>
+  <li><span class="news__date">May 2025</span> <a href="https://doi.org/10.3847/1538-4357/adc567">PKS 2131&minus;021</a>: coherent sinusoidal variations from radio to optical, strong evidence for a blazar SMBH binary.</li>
+  <li><span class="news__date">Oct 2024</span> <a href="https://doi.org/10.3847/1538-4357/ad76a1">High-density XILLVER reflection model</a> published in ApJ.</li>
+</ul>
+
+<p><a class="btn-pill" href="{{ base_path }}/publications/">All publications</a> <a class="btn-pill alt" href="{{ base_path }}/research/">Research details</a> <a class="btn-pill" href="{{ base_path }}/files/cv-yzding.pdf">CV (PDF)</a></p>
+
+## Contact
+
+<i class="fas fa-envelope"></i> [yding@caltech.edu](mailto:yding@caltech.edu) &nbsp;&middot;&nbsp; Cahill Center for Astronomy &amp; Astrophysics, Caltech, Pasadena, CA

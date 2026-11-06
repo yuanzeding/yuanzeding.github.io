@@ -17,8 +17,8 @@ main:
   - title: "CV"
     url: /cv/
     
-  - title: "Press"
-    url: /press/
+#  - title: "Press"
+#    url: /press/
 
 #  - title: "Guide"
 #    url: /markdown/

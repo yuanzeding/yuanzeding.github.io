@@ -1,0 +1,120 @@
+# Publication list used by _pages/publications.md and the About page.
+# first_author: true -> shown in the "First-author" section with a figure.
+# Add new papers at the top of each group.
+
+- title: "UGC 2369S: A Kiloparsec-scale Triple Merger Candidate Identified in a Nearby Luminous Infrared Galaxy"
+  authors: "<b>Y. Ding</b>, M. J. Koss, F. A. Harrison, C. C. Steidel, C. Auge, J. Gillette, E. Hammerstein, R. Li, M. Magno, I. del Moral-Castro, A. Peca, C. Ricci, Y. Song, E. Treister, Z. Zhuang"
+  journal: "ApJ"
+  ref: "1002, 130"
+  year: 2026
+  doi: "10.3847/1538-4357/ae5643"
+  first_author: true
+  image: "/images/research/ugc2369s_multiwavelength.jpg"
+  summary: "One of the clearest triple-nucleus mergers at ~3 kpc separations, and the first studied at high resolution across X-ray, optical/NIR adaptive-optics IFU and radio wavelengths. The northern core probably hosts the most massive black hole (~10<sup>8</sup> M<sub>&#9737;</sub>) and fits a heavily obscured AGN (N<sub>H</sub> &#8819; 10<sup>25</sup> cm<sup>-2</sup>), but the identification is still inconclusive. The other two cores show tidal disruption instead, and the stellar bulge of the southwestern core seems to have been stripped by the three-body potential."
+
+- title: "Next-generation Accretion Disk Reflection Model: High-density Plasma Effects"
+  authors: "<b>Y. Ding</b>, J. A. García, T. R. Kallman, C. Mendoza, M. Bautista, F. A. Harrison, J. A. Tomsick, J. Dong"
+  journal: "ApJ"
+  ref: "974, 280"
+  year: 2024
+  doi: "10.3847/1538-4357/ad76a1"
+  first_author: true
+  image: "/images/research/xillver_highdensity.jpg"
+  summary: "Adds high-density plasma corrections to the XSTAR atomic rates used by the XILLVER reflection model. The modified recombination rates account for most of the difference between model versions. Dense disks can produce strong Fe K and O resonance features even when highly ionized, which may explain the supersolar iron abundances found in some sources."
+
+- title: "Accretion Disk Outflow during the X-Ray Flare of the Super-Eddington Active Nucleus of I Zwicky 1"
+  authors: "<b>Y. Ding</b>, R. Li, L. C. Ho, C. Ricci"
+  journal: "ApJ"
+  ref: "931, 77"
+  year: 2022
+  doi: "10.3847/1538-4357/ac6955"
+  first_author: true
+  image: "/images/research/izw1_outflows.jpg"
+  summary: "Joint XMM-Newton + NuSTAR observations follow an X-ray flare in a super-Eddington NLS1. The corona cooled from ~200 to ~15 keV during the flare. Several variable ionized winds and ultrafast outflows follow &xi; &prop; v<sup>3.24</sup>, as expected for a super-Eddington wind, and their feedback can account for the undermassive black hole in I Zw 1."
+
+- title: "Timing and spectral variability of the high-mass X-ray pulsar GX 301&minus;2 over orbital phases observed by Insight-HXMT"
+  authors: "<b>Y. Z. Ding</b>, W. Wang, P. R. Epili, Q. Liu, M. Y. Ge, F. J. Lu, J. L. Qu, L. M. Song, S. Zhang, S. N. Zhang"
+  journal: "MNRAS"
+  ref: "506, 2712"
+  year: 2021
+  doi: "10.1093/mnras/stab1862"
+  first_author: true
+  image: "/images/research/gx301_crsf.jpg"
+  summary: "Finds two cyclotron lines (30&ndash;42 and 48&ndash;56 keV) that track luminosity: a positive correlation below ~10<sup>37</sup> erg s<sup>-1</sup> and a negative one above it. This implies a surface magnetic field of ~(0.5&ndash;2)&times;10<sup>13</sup> G."
+
+- title: "QPOs and orbital elements of X-ray binary 4U 0115+63 during the 2017 outburst observed by Insight-HXMT"
+  authors: "<b>Y. Z. Ding</b>, W. Wang, P. Zhang, Q. C. Bu, et al."
+  journal: "MNRAS"
+  ref: "503, 6045"
+  year: 2021
+  doi: "10.1093/mnras/stab835"
+  first_author: true
+  image: "/images/research/4u0115_wavelet.jpg"
+  summary: "Brings wavelet analysis to Insight-HXMT timing data, finding a ~10 mHz QPO plus multiple QPOs at ~16&ndash;32 s and ~67&ndash;200 s. It also updates the orbital elements, including the periastron precession rate."
+
+# ---------------- contributed / co-authored ----------------
+
+- title: "On the Relation between the Inclination Angle of the Accretion Disk and the Broad-line Region in Active Galactic Nuclei"
+  authors: "R. Du, L. C. Ho, <b>Y. Ding</b>, R. Li"
+  journal: "ApJ"
+  ref: "988, 3"
+  year: 2025
+  doi: "10.3847/1538-4357/addec8"
+  image: "/images/research/blr_disk_inclination.jpg"
+
+- title: "PKS J0805&minus;0111: A Second Owens Valley Radio Observatory Blazar Showing Highly Significant Sinusoidal Radio Variability&mdash;The Tip of the Iceberg"
+  authors: "P. V. de la Parra, S. Kiehlmann, P. Mróz, A. C. S. Readhead, et al. (incl. <b>Y. Ding</b>)"
+  journal: "ApJ"
+  ref: "987, 191"
+  year: 2025
+  doi: "10.3847/1538-4357/addc60"
+
+- title: "PKS 2131&minus;021&mdash;Discovery of Strong Coherent Sinusoidal Variations from Radio to Optical Frequencies: Compelling Evidence for a Blazar Supermassive Black Hole Binary"
+  authors: "S. Kiehlmann, P. V. de la Parra, A. G. Sullivan, A. Synani, et al. (incl. <b>Y. Ding</b>)"
+  journal: "ApJ"
+  ref: "985, 59"
+  year: 2025
+  doi: "10.3847/1538-4357/adc567"
+  image: "/images/research/pks2131_sinusoid.jpg"
+
+- title: "Characterizing the Broadband Reflection Spectrum of MAXI J1803&minus;298 during Its 2021 Outburst with NuSTAR and NICER"
+  authors: "O. K. Adegoke, J. A. García, R. M. T. Connors, <b>Y. Ding</b>, et al."
+  journal: "ApJ"
+  ref: "977, 26"
+  year: 2024
+  doi: "10.3847/1538-4357/ad82e9"
+
+- title: "Evidence for a nearly orthogonal rotator in GX 301&ndash;2 with phase-resolved cyclotron resonant scattering features"
+  authors: "X. Chen, <b>Y. Ding</b>, W. Wang, O. Nishimura, et al."
+  journal: "MNRAS"
+  ref: "530, 3589"
+  year: 2024
+  doi: "10.1093/mnras/stae1071"
+
+- title: "The Reliability of Accretion Disk Inclination Derived from X-Ray Spectroscopy of Active Galaxies"
+  authors: "R. Du, <b>Y. Ding</b>, L. C. Ho, R. Li"
+  journal: "ApJ"
+  ref: "963, 152"
+  year: 2024
+  doi: "10.3847/1538-4357/ad245c"
+
+- title: "Variations of cyclotron resonant scattering features in Vela X-1 revealed with Insight-HXMT"
+  authors: "Q. Liu, W. Wang, X. Chen, <b>Y. Z. Ding</b>, et al."
+  journal: "MNRAS"
+  ref: "514, 2805"
+  year: 2022
+  doi: "10.1093/mnras/stac1520"
+
+- title: "Wavelet analysis of MAXI J1535&ndash;571 with Insight-HXMT"
+  authors: "X. Chen, W. Wang, B. You, P. F. Tian, Q. Liu, P. Zhang, <b>Y. Z. Ding</b>, et al."
+  journal: "MNRAS"
+  ref: "513, 4875"
+  year: 2022
+  doi: "10.1093/mnras/stac1175"
+
+- title: "Relation of Cyclotron Resonant Energy and Luminosity in a Strongly Magnetized Neutron Star GRO J1008&minus;57 Observed by Insight-HXMT"
+  authors: "X. Chen, W. Wang, Y. M. Tang, <b>Y. Z. Ding</b>, et al."
+  journal: "ApJ"
+  ref: "919, 33"
+  year: 2021
+  doi: "10.3847/1538-4357/ac1268"

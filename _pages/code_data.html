@@ -4,3 +4,38 @@ title: "Public Code and Data"
 permalink: /code_data/
 author_profile: true
 ---
+
+{% include base_path %}
+
+<p>Software I develop or contribute to. Most of it targets integral-field spectroscopy with Keck/KCWI and multi-band modeling of AGN host galaxies.</p>
+
+<div class="card-grid">
+  <div class="card">
+    <div class="card__body">
+      <div class="card__label">KCWI &middot; post-processing</div>
+      <div class="card__title"><a href="https://github.com/yuguangchen1/KcwiKit">KcwiKit</a></div>
+      <p class="card__text">Post-processing tools for the Keck Cosmic Web Imager (<a href="https://ascl.net/2404.003">ASCL 2404.003</a>). I wrote <code>kcwi_xalign</code> (frame alignment and blue/red channel cross-alignment) and <code>kcwi_skylevel</code> (matching sky levels between the blue and red channels).</p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card__body">
+      <div class="card__label">KCWI &middot; sky subtraction</div>
+      <div class="card__title"><a href="https://github.com/zhuyunz/KSkyWizard">KSkyWizard</a></div>
+      <p class="card__text">Improves the reduction of KCWI red-channel data: sky subtraction, flux calibration and telluric correction. I contributed bug fixes and used it on the KCWI data for UGC 2369S.</p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card__body">
+      <div class="card__label">Imaging + SED fitting</div>
+      <div class="card__title"><a href="https://ruancunli.github.io/GalfitS/">GalfitS</a></div>
+      <p class="card__text">Python package that fits multi-band images and SEDs together to separate AGN and host-galaxy light. It uses JAX just-in-time compilation and MCMC for uncertainties. I help develop it.</p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card__body">
+      <div class="card__label">X-ray reflection</div>
+      <div class="card__title"><a href="https://sites.srl.caltech.edu/~javier/xillver/">XILLVER / XSTAR</a></div>
+      <p class="card__text">Reflection and photoionization models for accreting black holes. I implemented the high-density plasma corrections to the atomic rates described in <a href="https://doi.org/10.3847/1538-4357/ad76a1">Ding et al. 2024</a>.</p>
+    </div>
+  </div>
+</div>
