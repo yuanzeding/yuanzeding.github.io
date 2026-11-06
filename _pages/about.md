@@ -26,7 +26,7 @@ My current work centers on the **CGM of AGN at cosmic noon**. I use deep Keck/KC
 
 <!-- My latest work demonstrates that at redshift 2–4, the CGM is more closely correlated with the host galaxies' stellar mass rather than direct supermassive black hole (SMBH) activity, leading to new investigations into whether black hole feedback is more effective at higher redshifts. -->
 
-I also build tools for the community. I contribute to the [KcwiKit](https://github.com/yuguangchen1/KcwiKit) KCWI post-processing package (frame and blue/red channel cross-alignment, sky-level matching) and to [KSkyWizard](https://github.com/zhuyunz/KSkyWizard). I am also involved in developing [GalfitS](https://ruancunli.github.io/GalfitS/), a JAX-accelerated tool that jointly fits multi-band images and SEDs.
+I also work on KCWI data reduction and have made smaller contributions to community packages such as [KcwiKit](https://github.com/yuguangchen1/KcwiKit) and [KSkyWizard](https://github.com/zhuyunz/KSkyWizard). I am also involved in developing GalfitS, a code that fits multi-band images and SEDs together.
 
 ## Research highlights
 
