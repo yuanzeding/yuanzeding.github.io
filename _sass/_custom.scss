@@ -438,3 +438,44 @@ a.feature {
   padding-left: 1.1em;
   li { margin-bottom: 0.25em; line-height: 1.45; font-size: 1em; }
 }
+
+/* ---------- reduction flow (Code/Data) ---------- */
+
+.flow {
+  list-style: none;
+  margin: 0.8em 0 1.4em;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+  grid-gap: 0.6em;
+  gap: 0.6em;
+  counter-reset: none;
+  li {
+    position: relative;
+    margin: 0;
+    padding: 0.75em 0.8em 0.8em;
+    border-radius: 10px;
+    background: linear-gradient(160deg, #1e1b4b 0%, #312e81 70%, #6d28d9 130%);
+    color: #e0e7ff;
+    box-shadow: $card-shadow;
+  }
+  .flow__n {
+    display: inline-block;
+    width: 1.6em;
+    height: 1.6em;
+    line-height: 1.6em;
+    text-align: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.75em;
+    margin-bottom: 0.35em;
+  }
+  .flow__t { display: block; color: #fff; font-weight: 700; font-size: 0.82em; line-height: 1.25; }
+  .flow__s { display: block; font-size: 0.68em; color: #c7d2fe; margin-top: 0.25em; line-height: 1.35; }
+}
+
+p.note,
+.archive p.note,
+.page__content p.note { font-size: 0.75em; color: $muted; margin-top: -0.6em; }

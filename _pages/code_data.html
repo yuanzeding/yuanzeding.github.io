@@ -7,43 +7,73 @@ author_profile: true
 
 {% include base_path %}
 
-<p>Deep integral-field data are only as good as their reduction. Much of my thesis work rests on Keck/KCWI data, and I have put substantial effort into improving the community tools used to reduce it. The original developers built the foundation of each package below. My contributions extend that foundation, aiming to make deep KCWI stacks as clean as possible, especially for faint, extended Ly&alpha; emission.</p>
+<p>Deep integral-field data are only as good as their reduction. My thesis rests on Keck/KCWI data of faint, extended Ly&alpha; emission and of nearby AGN hosts, so I have put substantial work into the tools that turn raw KCWI exposures into science-ready cubes and maps. The original developers of each package built its foundation. My contributions extend it, aiming to make deep blue+red KCWI stacks as clean and as well registered as possible.</p>
 
-<h2>KCWI data reduction</h2>
+<p><a class="btn-pill" href="{{ base_path }}/files/KCWI_BlueRed_Reduction_Workflow.pdf">KCWI blue+red reduction workflow (PDF)</a></p>
+
+<h2>KCWI blue+red reduction, end to end</h2>
+
+<ol class="flow">
+  <li><span class="flow__n">1</span><span class="flow__t">Per-frame reduction</span><span class="flow__s">KCWI DRP, automated masks, extra CR pass</span></li>
+  <li><span class="flow__n">2</span><span class="flow__t">Saturation screen</span><span class="flow__s">raw frames of bright QSOs</span></li>
+  <li><span class="flow__n">3</span><span class="flow__t">Red-channel sky</span><span class="flow__s">KSkyWizard, PCA sky subtraction</span></li>
+  <li><span class="flow__n">4</span><span class="flow__t">Blue+red alignment</span><span class="flow__s">all frames, both channels, no point source</span></li>
+  <li><span class="flow__n">5</span><span class="flow__t">Stack</span><span class="flow__s">common grid, split-frame CR rejection, sky matching</span></li>
+  <li><span class="flow__n">6</span><span class="flow__t">Check &amp; analyze</span><span class="flow__s">blue vs red registration, then GIST/pPXF maps</span></li>
+</ol>
+
+<div class="pub-stats">
+  <div class="stat"><div class="stat__num">5 mas</div><div class="stat__lbl">blue&ndash;red offset after re-alignment (was 200 mas)</div></div>
+  <div class="stat"><div class="stat__num">&lt; 1 mas</div><div class="stat__lbl">frame-to-frame agreement (worst frame was 0.44&Prime; off)</div></div>
+  <div class="stat"><div class="stat__num">&gt; 2&sigma;</div><div class="stat__lbl">CR residuals effectively all removed (7-frame stack)</div></div>
+</div>
+<p class="note">Alignment numbers are for the Mrk 248 stacks, comparing the old per-channel alignment with the new joint one. Alignment and cosmic-ray tools were also validated on synthetic KCWI frames.</p>
 
 <div class="card-grid">
   <div class="card">
     <div class="card__body">
-      <div class="card__label">Reduction pipeline</div>
-      <div class="card__title"><a href="https://github.com/Keck-DataReductionPipelines/KCWI_DRP">KCWI DRP</a></div>
-      <p class="card__text">The official Python data reduction pipeline for KCWI (<a href="https://kcwi-drp.readthedocs.io/">docs</a>). My improvements to the reduction:</p>
+      <div class="card__label">Per-frame reduction</div>
+      <div class="card__title"><a href="https://github.com/yuanzeding/KCWI_DRP/tree/old-state">KCWI DRP</a></div>
+      <p class="card__text">Built on the official <a href="https://github.com/Keck-DataReductionPipelines/KCWI_DRP">Keck KCWI pipeline</a>. My work on the per-frame reduction:</p>
       <ul class="card__list">
-        <li>Better cosmic-ray rejection</li>
-        <li>More accurate wavelength correction</li>
-        <li>Automated generation of sky and source masks</li>
+        <li>Cosmic-ray rejection that no longer flags bright continuum sources (QSOs, galaxy nuclei) as cosmic rays</li>
+        <li>Appropriate handling of the wavelength corrections</li>
+        <li>Automated sky and source masks from source contours, for every exposure, replacing hand-drawn regions</li>
       </ul>
     </div>
   </div>
   <div class="card">
     <div class="card__body">
-      <div class="card__label">Post-processing</div>
-      <div class="card__title"><a href="https://github.com/yuguangchen1/KcwiKit">KcwiKit</a></div>
-      <p class="card__text">Post-processing and stacking for KCWI, originally developed by Y. Chen, N. Prusinski and collaborators (<a href="https://ascl.net/2404.003">ASCL 2404.003</a>). My additions:</p>
+      <div class="card__label">Alignment &amp; stacking</div>
+      <div class="card__title"><a href="https://github.com/yuanzeding/kcwi/tree/dev">KcwiKit</a></div>
+      <p class="card__text">Built on <a href="https://github.com/yuguangchen1/KcwiKit">KcwiKit</a> by Y. Chen, N. Prusinski and collaborators (<a href="https://ascl.net/2404.003">ASCL 2404.003</a>). My additions:</p>
       <ul class="card__list">
-        <li>Much more accurate frame-to-frame and blue/red cross-channel alignment</li>
-        <li>Post-DRP cosmic-ray rejection that removes nearly all CR residuals</li>
-        <li>Post-DRP sky matching that removes sky-subtraction differences between channels</li>
+        <li>Joint frame-to-frame and blue/red cross-channel alignment by cross-correlation. It needs no point source and works across position angles, registering both channels to ~0.01&ndash;0.02&Prime;.</li>
+        <li>Post-DRP cosmic-ray rejection that compares each frame with the rest and removes nearly all CR residuals</li>
+        <li>Post-DRP sky-level matching that removes sky-subtraction differences between the blue and red channels</li>
       </ul>
     </div>
   </div>
   <div class="card">
     <div class="card__body">
-      <div class="card__label">Red-channel sky subtraction</div>
-      <div class="card__title"><a href="https://github.com/zhuyunz/KSkyWizard">KSkyWizard</a></div>
-      <p class="card__text">Sky subtraction and calibration for the KCWI red channel, originally developed by Z. Zhuang. My additions:</p>
+      <div class="card__label">Red-channel sky</div>
+      <div class="card__title"><a href="https://github.com/zhuyunz/KSkyWizard/tree/auto">KSkyWizard</a></div>
+      <p class="card__text">Telluric correction and PCA sky subtraction for the KCWI red channel, developed by Z. Zhuang. My additions:</p>
       <ul class="card__list">
-        <li>Automated processing</li>
+        <li>Automated processing (the <code>auto</code> branch)</li>
         <li>Bug fixes</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card__body">
+      <div class="card__label">IFU spectral fitting</div>
+      <div class="card__title">GIST for KCWI blue+red</div>
+      <p class="card__text">Extends the <a href="https://arxiv.org/abs/1906.04746">GIST pipeline</a> (Bittner et al. 2019) for pPXF fits of combined blue+red KCWI cubes, in a development version that is not yet public:</p>
+      <ul class="card__list">
+        <li>A corrected blue+red read-in: proper wavelength grid across the dichroic gap, plus mask and variance propagation</li>
+        <li>Hierarchical spatial binning that follows surface brightness (Pipe3D/CAPIVARA-style), as an alternative to Voronoi</li>
+        <li>Mask-aware S/N, a covariance check for drizzled cubes, and a number of robustness fixes</li>
       </ul>
     </div>
   </div>
