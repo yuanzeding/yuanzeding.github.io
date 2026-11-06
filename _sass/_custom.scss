@@ -352,6 +352,7 @@ a.card:hover,
   border-radius: 4px;
   margin-bottom: 0.4em;
   &.ongoing  { background: #ecfdf5; color: #047857; }
+  &.prelim   { background: #fffbeb; color: #b45309; }
   &.published { background: $accent-light; color: $accent; }
 }
 
@@ -373,4 +374,59 @@ a.card:hover,
     background: #fff;
   }
   @media (max-width: 640px) { grid-template-columns: 1fr; }
+}
+
+/* ---------- preliminary-result callout + wide figure ---------- */
+
+.callout.prelim {
+  background: #fffbeb;
+  border-left-color: #f59e0b;
+  .callout__title { color: #b45309; }
+}
+
+.research-figure {
+  margin: 0.4em auto 1.6em;
+  max-width: 600px;
+  img {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid $card-border;
+    box-shadow: $card-shadow;
+    background: #fff;
+  }
+  figcaption {
+    font-family: $global-font-family;
+    font-size: 0.72em;
+    color: $muted;
+    margin-top: 0.4em;
+  }
+}
+
+.card .card__label .prelim-tag {
+  color: #b45309;
+}
+
+.badge.prelim { background: #fffbeb; color: #b45309; }
+.pub--prelim { border-left: 4px solid #f59e0b; }
+
+/* featured current-work card on the home page */
+a.feature {
+  display: flex;
+  flex-direction: row;
+  margin: 0.8em 0 1.6em;
+  .feature__img {
+    flex: 0 0 44%;
+    background: #fff;
+    border-right: 1px solid $card-border;
+    display: flex;
+    align-items: center;
+    img { display: block; width: 100%; }
+  }
+  .card__title { font-size: 1.05em; }
+  .card__text { font-size: 0.82em; }
+  .status { margin-bottom: 0; vertical-align: middle; }
+  @media (max-width: 640px) {
+    flex-direction: column;
+    .feature__img { flex-basis: auto; border-right: none; border-bottom: 1px solid $card-border; }
+  }
 }

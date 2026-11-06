@@ -22,11 +22,22 @@ redirect_from:
   </div>
 </div>
 
-My current work centers on the **CGM of AGN at cosmic noon**. I use deep Keck/KCWI integral-field and Keck/MOSFIRE spectroscopy from the Keck Baryonic Structure Survey (KBSS) to map extended Ly&alpha; nebulae around type-1 and type-2 AGN, optically faint QSOs, and hyperluminous QSOs. The goal is to see how much of the gas around a galaxy is set by its black hole and how much by the galaxy itself. I also draw on archival HST and JWST imaging.
+My current work centers on the **CGM of AGN at cosmic noon**. I use deep Keck/KCWI integral-field and Keck/MOSFIRE spectroscopy from the Keck Baryonic Structure Survey (KBSS) to map extended Ly&alpha; nebulae around 55 AGN, from hyperluminous QSOs to optically faint broad-line AGN and type-2 AGN. The goal is to see how much of the gas around a galaxy is set by its black hole and how much by the galaxy itself.
 
 <!-- My latest work demonstrates that at redshift 2–4, the CGM is more closely correlated with the host galaxies' stellar mass rather than direct supermassive black hole (SMBH) activity, leading to new investigations into whether black hole feedback is more effective at higher redshifts. -->
 
 I also work on KCWI data reduction and have made smaller contributions to community packages such as [KcwiKit](https://github.com/yuguangchen1/KcwiKit) and [KSkyWizard](https://github.com/zhuyunz/KSkyWizard). I am also involved in developing GalfitS, a code that fits multi-band images and SEDs together.
+
+## Current work
+
+<a class="feature card" href="{{ base_path }}/research/#cgm">
+  <div class="feature__img"><img src="{{ base_path }}/images/research/cgm_hlqso_nebulae.jpg" alt="Lyman-alpha nebulae around hyperluminous QSOs" loading="lazy"></div>
+  <div class="card__body">
+    <div class="card__label"><span class="status prelim">Preliminary</span> &nbsp;About to be submitted</div>
+    <div class="card__title">The nature of the extended Ly&alpha; nebulae around AGN at z ~ 2&ndash;3</div>
+    <p class="card__text">KCWI finds extended Ly&alpha; around nearly every AGN in the sample, yet nebular luminosity rises only ~15&times; while AGN ionizing output rises 1000&times;. In faint AGN, Ly&alpha; is broader and redder than the Balmer lines, pointing to resonant scattering by dense neutral clumps. Type-2 AGN have brighter, more compact nebulae, which favors a gas-rich evolutionary phase over orientation alone. <i>These results are preliminary.</i></p>
+  </div>
+</a>
 
 ## Research highlights
 
@@ -68,7 +79,7 @@ I also work on KCWI data reduction and have made smaller contributions to commun
 ## News
 
 <ul class="news">
-  <li><span class="news__date">Ongoing</span> Writing up the KBSS/KCWI study of extended Ly&alpha; nebulae and the CGM around AGN at z ~ 2&ndash;3.</li>
+  <li><span class="news__date">Nov 2026</span> Paper I on the extended Ly&alpha; nebulae around 55 KBSS AGN (Keck/KCWI + MOSFIRE) is nearly ready for submission. <a href="{{ base_path }}/research/#cgm">Preliminary results &rarr;</a></li>
   <li><span class="news__date">May 2026</span> <a href="https://doi.org/10.3847/1538-4357/ae5643">UGC 2369S triple-merger paper</a> published in ApJ.</li>
   <li><span class="news__date">Jul 2025</span> Two co-authored papers out: <a href="https://doi.org/10.3847/1538-4357/addec8">BLR vs. accretion-disk inclination</a> and the <a href="https://doi.org/10.3847/1538-4357/addc60">sinusoidal blazar PKS J0805&minus;0111</a>.</li>
   <li><span class="news__date">May 2025</span> <a href="https://doi.org/10.3847/1538-4357/adc567">PKS 2131&minus;021</a>: coherent sinusoidal variations from radio to optical, strong evidence for a blazar SMBH binary.</li>
