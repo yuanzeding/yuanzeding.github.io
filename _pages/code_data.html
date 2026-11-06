@@ -7,28 +7,56 @@ author_profile: true
 
 {% include base_path %}
 
-<p>Much of my work depends on community software for integral-field spectroscopy and X-ray spectral modeling. These are the packages I have contributed to. My contributions to each are partial: the main credit goes to their developers, who are linked below.</p>
+<p>Deep integral-field data are only as good as their reduction. Much of my thesis work rests on Keck/KCWI data, and I have put substantial effort into improving the community tools used to reduce it. The original developers built the foundation of each package below. My contributions extend that foundation, aiming to make deep KCWI stacks as clean as possible, especially for faint, extended Ly&alpha; emission.</p>
+
+<h2>KCWI data reduction</h2>
 
 <div class="card-grid">
   <div class="card">
     <div class="card__body">
-      <div class="card__label">KCWI data reduction</div>
+      <div class="card__label">Reduction pipeline</div>
+      <div class="card__title"><a href="https://github.com/Keck-DataReductionPipelines/KCWI_DRP">KCWI DRP</a></div>
+      <p class="card__text">The official Python data reduction pipeline for KCWI (<a href="https://kcwi-drp.readthedocs.io/">docs</a>). My improvements to the reduction:</p>
+      <ul class="card__list">
+        <li>Better cosmic-ray rejection</li>
+        <li>More accurate wavelength correction</li>
+        <li>Automated generation of sky and source masks</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card__body">
+      <div class="card__label">Post-processing</div>
       <div class="card__title"><a href="https://github.com/yuguangchen1/KcwiKit">KcwiKit</a></div>
-      <p class="card__text">Post-processing tools for the Keck Cosmic Web Imager, developed by N. Prusinski, Y. Chen and collaborators (<a href="https://ascl.net/2404.003">ASCL 2404.003</a>). I have contributed small additions for aligning exposures and matching the blue and red channels.</p>
+      <p class="card__text">Post-processing and stacking for KCWI, originally developed by Y. Chen, N. Prusinski and collaborators (<a href="https://ascl.net/2404.003">ASCL 2404.003</a>). My additions:</p>
+      <ul class="card__list">
+        <li>Much more accurate frame-to-frame and blue/red cross-channel alignment</li>
+        <li>Post-DRP cosmic-ray rejection that removes nearly all CR residuals</li>
+        <li>Post-DRP sky matching that removes sky-subtraction differences between channels</li>
+      </ul>
     </div>
   </div>
   <div class="card">
     <div class="card__body">
-      <div class="card__label">KCWI data reduction</div>
+      <div class="card__label">Red-channel sky subtraction</div>
       <div class="card__title"><a href="https://github.com/zhuyunz/KSkyWizard">KSkyWizard</a></div>
-      <p class="card__text">Sky subtraction and calibration for KCWI red-channel data, developed by Z. Zhuang. I have made minor contributions, mostly bug fixes, from using it on my own data.</p>
+      <p class="card__text">Sky subtraction and calibration for the KCWI red channel, originally developed by Z. Zhuang. My additions:</p>
+      <ul class="card__list">
+        <li>Automated processing</li>
+        <li>Bug fixes</li>
+      </ul>
     </div>
   </div>
+</div>
+
+<h2>X-ray reflection models</h2>
+
+<div class="card-grid">
   <div class="card">
     <div class="card__body">
-      <div class="card__label">X-ray reflection</div>
+      <div class="card__label">Spectral models</div>
       <div class="card__title"><a href="https://sites.srl.caltech.edu/~javier/xillver/">XILLVER / XSTAR</a></div>
-      <p class="card__text">Reflection and photoionization models for accreting black holes, developed by J. García, T. Kallman and collaborators. I contributed updates to the atomic rates for high-density plasma effects (<a href="https://doi.org/10.3847/1538-4357/ad76a1">Ding et al. 2024</a>).</p>
+      <p class="card__text">Reflection and photoionization models for accreting black holes, developed by J. García, T. Kallman and collaborators. I implemented the high-density plasma corrections to the atomic rates (<a href="https://doi.org/10.3847/1538-4357/ad76a1">Ding et al. 2024</a>).</p>
     </div>
   </div>
 </div>

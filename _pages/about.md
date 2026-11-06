@@ -10,9 +10,9 @@ redirect_from:
 {% include base_path %}
 
 <div class="hero">
-  <p class="hero__kicker">Ph.D. candidate &middot; Caltech Astronomy</p>
+  <p class="hero__kicker">Ph.D. candidate &middot; Caltech Physics</p>
   <h2 class="hero__title">Black holes, their host galaxies, and the gas around them</h2>
-  <p>I am a fifth-year Ph.D. candidate in Astrophysics at Caltech, co-advised by <b>Prof. Charles Steidel</b> and <b>Prof. Fiona Harrison</b>. I use X-ray, optical and near-infrared spectroscopy to study how accreting supermassive black holes shape their environments, from the inner accretion disk out to the circumgalactic medium (CGM).</p>
+  <p>I am a fifth-year Ph.D. candidate in Physics at Caltech, co-advised by <b>Prof. Charles Steidel</b> and <b>Prof. Fiona Harrison</b>. I use X-ray, optical and near-infrared spectroscopy to study how accreting supermassive black holes shape their environments, from the inner accretion disk out to the circumgalactic medium (CGM).</p>
   <div class="tag-row">
     <span class="tag">AGN &amp; CGM at z ~ 2&ndash;3</span>
     <span class="tag">Keck / KCWI &amp; MOSFIRE</span>
@@ -26,7 +26,7 @@ My current work centers on the **CGM of AGN at cosmic noon**. I use deep Keck/KC
 
 <!-- My latest work demonstrates that at redshift 2–4, the CGM is more closely correlated with the host galaxies' stellar mass rather than direct supermassive black hole (SMBH) activity, leading to new investigations into whether black hole feedback is more effective at higher redshifts. -->
 
-I also work on KCWI data reduction and have made smaller contributions to community packages such as [KcwiKit](https://github.com/yuguangchen1/KcwiKit) and [KSkyWizard](https://github.com/zhuyunz/KSkyWizard). I am also involved in developing GalfitS, a code that fits multi-band images and SEDs together.
+I have also put substantial work into **KCWI data reduction**, building on the foundations laid by the original developers. My additions to the [KCWI DRP](https://github.com/Keck-DataReductionPipelines/KCWI_DRP), [KcwiKit](https://github.com/yuguangchen1/KcwiKit) and [KSkyWizard](https://github.com/zhuyunz/KSkyWizard) include better cosmic-ray rejection, wavelength corrections, automated sky and source masks, more accurate alignment between frames and between channels, and post-DRP sky matching. Together these make deep KCWI stacks considerably cleaner ([details]({{ base_path }}/code_data/)). I am also involved in developing GalfitS, a code that fits multi-band images and SEDs together.
 
 ## Current work
 

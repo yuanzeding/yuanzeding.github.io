@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Yuanze Ding"
 title_separator          : "-"
 name                     : &name "Yuanze Ding"
-description              : &description "Ph.D. candidate in astrophysics at Caltech: AGN, the circumgalactic medium, and X-ray accretion physics"
+description              : &description "Ph.D. candidate in physics at Caltech: AGN, the circumgalactic medium, and X-ray accretion physics"
 url                      : https://yuanzeding.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "yuanzeding/yuanzeding.github.io"
@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Yuanze Ding"
   avatar           : "myphoto_compre_small.jpeg"
-  bio              : "Ph.D. candidate, Astrophysics @ Caltech"
+  bio              : "Ph.D. candidate, Physics @ Caltech"
   location         : "Pasadena, CA"
   employer         :
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
