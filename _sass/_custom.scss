@@ -472,117 +472,125 @@ p.note,
 .archive p.note,
 .page__content p.note { font-size: 0.75em; color: $muted; margin-top: -0.6em; }
 
-/* ---------- Google-Scholar-style citation box (Publications) ---------- */
+/* ---------- Google Scholar "Cited by" panel (Publications) ---------- */
 
-.pub-overview {
+.pub-top {
   display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  margin: 0.5em 0 1.2em;
-  .pub-overview__counts {
-    flex: 0 0 170px;
-    display: flex;
+  align-items: flex-start;
+  margin: 0.4em 0 1.2em;
+  .pub-top__text { flex: 1; margin-right: 1.4em; font-size: 0.92em; }
+  @media (max-width: 760px) {
     flex-direction: column;
-    margin-right: 1em;
-    .stat { flex: 1; margin: 0 0 0.8em 0; }
-    .stat:last-child { margin-bottom: 0; }
-  }
-  .pub-stats { margin: 0; }
-  @media (max-width: 640px) {
-    .pub-overview__counts { flex: 1 1 100%; flex-direction: row; margin: 0 0 0.8em; }
-    .pub-overview__counts .stat { margin: 0 0.8em 0 0; }
+    .pub-top__text { margin: 0 0 1em; }
   }
 }
 
-.scholar {
-  flex: 1 1 320px;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0.9em 1.1em;
-  border: 1px solid $card-border;
-  border-radius: 10px;
+.gs {
+  flex: 0 0 300px;
+  width: 300px;
+  max-width: 100%;
+  font-family: Roboto, Arial, sans-serif;
+  color: #222;
   background: #fff;
-  box-shadow: $card-shadow;
-  font-family: $global-font-family;
 
-  .scholar__head {
-    flex: 1 1 100%;
+  .gs__head {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    font-size: 0.95em;
-    font-weight: 600;
-    color: $ink;
-    margin-bottom: 0.4em;
-    .scholar__asof { font-size: 0.68em; font-weight: 400; color: $muted; }
-    a { text-decoration: none; }
+    padding: 0 0 0.6em;
+    border-bottom: 1px solid #e0e0e0;
   }
-  table.scholar__table {
-    flex: 1 1 170px;
+  .gs__title { font-size: 1.05em; font-weight: 400; color: #222; }
+  .gs__link {
+    font-size: 0.72em;
+    letter-spacing: 0.02em;
+    color: #1a0dab !important;
+    text-decoration: none !important;
+    font-weight: 500;
+  }
+
+  table.gs__table {
     display: table;
-    width: auto;
-    margin: 0 1.2em 0.6em 0;
+    width: 100%;
+    margin: 0 0 1.2em;
     border: none;
     border-collapse: collapse;
     font-size: 0.8em;
     th, td {
-      padding: 0.35em 0.5em 0.35em 0;
+      padding: 0.45em 0;
       border: none;
-      border-bottom: 1px solid $card-border;
-      text-align: right;
-      color: $ink;
-      white-space: nowrap;
       background: none;
+      text-align: right;
+      color: #222;
+      font-weight: 400;
+      white-space: nowrap;
     }
-    th { font-weight: 400; color: $muted; }
+    th { border-bottom: 1px solid #e0e0e0; color: #222; }
     th:first-child, td:first-child { text-align: left; }
-    td.num { font-variant-numeric: tabular-nums; font-weight: 600; }
+    td:nth-child(2) { padding-right: 1.6em; }
+    th:nth-child(2) { padding-right: 1.6em; }
   }
-  .scholar__chart {
-    flex: 1 1 200px;
-    min-width: 200px;
-    display: flex;
-    flex-direction: column;
-  }
-  .scholar__bars {
-    position: relative;
-    height: 120px;
+
+  .gs__chart { display: flex; }
+  .gs__plot { flex: 1; }
+  .gs__bars {
+    height: 150px;
     display: flex;
     align-items: flex-end;
-    justify-content: space-around;
-    border-bottom: 1px solid #d1d5db;
+    border-bottom: 1px solid #e0e0e0;
     background:
-      linear-gradient(to top, transparent calc(25% - 1px), #f1f5f9 25%, transparent calc(25% + 1px)),
-      linear-gradient(to top, transparent calc(50% - 1px), #f1f5f9 50%, transparent calc(50% + 1px)),
-      linear-gradient(to top, transparent calc(75% - 1px), #f1f5f9 75%, transparent calc(75% + 1px)),
-      linear-gradient(to top, transparent calc(100% - 1px), #f1f5f9 100%);
+      linear-gradient(to bottom, #e8e8e8 1px, transparent 1px) 0 0 / 100% 25%;
   }
-  .scholar__bar {
-    position: relative;
-    width: 11%;
-    min-height: 1px;
-    background: linear-gradient(180deg, #6366f1, $accent);
-    border-radius: 3px 3px 0 0;
-    transition: background 0.15s ease;
-    &:hover { background: $accent-2; }
-    .scholar__val {
-      position: absolute;
-      top: -1.35em;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 0.62em;
-      color: $muted;
-      white-space: nowrap;
-    }
-  }
-  .scholar__years {
+  .gs__col {
+    flex: 1;
+    height: 100%;
     display: flex;
-    justify-content: space-around;
-    font-size: 0.62em;
-    color: $muted;
-    margin-top: 0.3em;
-    span { width: 11%; text-align: center; }
+    align-items: flex-end;
+    justify-content: center;
   }
+  .gs__bar {
+    position: relative;
+    width: 58%;
+    min-height: 1px;
+    background: #777;
+  }
+  .gs__col { cursor: default; }
+  .gs__col:hover .gs__bar { background: #4d4d4d; }
+  .gs__col:hover .gs__tip { opacity: 1; }
+  .gs__tip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%, -3px);
+    font-size: 0.68em;
+    line-height: 1.5;
+    color: #222;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    padding: 0.1em 0.45em;
+    white-space: nowrap;
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.1s ease;
+  }
+  .gs__years {
+    display: flex;
+    span { flex: 1; text-align: center; font-size: 0.62em; color: #777; padding-top: 0.25em; }
+  }
+  .gs__axis {
+    width: 2.2em;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 0.4em;
+    span { font-size: 0.66em; color: #777; line-height: 1; transform: translateY(-0.1em); }
+    span:first-child { transform: translateY(-0.45em); }
+    span:last-child { transform: translateY(0.35em); }
+  }
+  .gs__foot { font-size: 0.62em; color: #999; text-align: right; margin-top: 0.8em; }
 }
 
 .research-figure.research-figure--wide { max-width: none; }

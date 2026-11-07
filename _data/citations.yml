@@ -2,7 +2,7 @@
 # Update these numbers by hand from Google Scholar (per-year counts read off the
 # Scholar bar chart; they should add up to `total`).
 as_of: "Nov 2026"
-scholar_url: ""          # paste your Google Scholar profile URL here to link the box
+scholar_url: "https://scholar.google.com/citations?user=H1eVXSQAAAAJ&hl=en"
 total: 238
 since_label: "Since 2021"
 total_since: 238

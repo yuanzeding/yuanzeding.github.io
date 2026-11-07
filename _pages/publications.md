@@ -10,35 +10,33 @@ author_profile: true
 {% assign firsts = pubs | where: "first_author", true %}
 
 {% assign cit = site.data.citations %}
-<div class="pub-overview">
-  <div class="pub-overview__counts pub-stats">
-    <div class="stat"><div class="stat__num">{{ pubs | size }}</div><div class="stat__lbl">Refereed papers</div></div>
-    <div class="stat"><div class="stat__num">{{ firsts | size }}</div><div class="stat__lbl">First-author</div></div>
+<div class="pub-top">
+  <div class="pub-top__text">
+    <p>{{ pubs | size }} refereed papers, {{ firsts | size }} of them first-author, spanning X-ray studies of accreting black holes and neutron stars to integral-field spectroscopy of AGN hosts and their circumgalactic gas. Below are my first-author papers with a key figure from each, followed by papers I contributed to.</p>
+    <p>
+      <a class="btn-pill" href="{{ cit.scholar_url }}">Google Scholar</a>
+      <a class="btn-pill" href="https://ui.adsabs.harvard.edu/search/q=orcid%3A%220000-0002-5770-2666%22&amp;sort=date%20desc%2C%20bibcode%20desc&amp;p_=0">NASA ADS</a>
+      <a class="btn-pill alt" href="https://orcid.org/0000-0002-5770-2666">ORCID</a>
+    </p>
   </div>
-  <div class="scholar">
-    <div class="scholar__head">
-      <span>{% if cit.scholar_url != "" %}<a href="{{ cit.scholar_url }}">Cited by</a>{% else %}Cited by{% endif %}</span>
-      <span class="scholar__asof">Google Scholar, {{ cit.as_of }}</span>
-    </div>
-    <table class="scholar__table">
+  <div class="gs">
+    <div class="gs__head"><span class="gs__title">Cited by</span><a class="gs__link" href="{{ cit.scholar_url }}">VIEW ALL</a></div>
+    <table class="gs__table">
       <tr><th></th><th>All</th><th>{{ cit.since_label }}</th></tr>
-      <tr><td>Citations</td><td class="num">{{ cit.total }}</td><td class="num">{{ cit.total_since }}</td></tr>
-      <tr><td>h-index</td><td class="num">{{ cit.h_index }}</td><td class="num">{{ cit.h_index_since }}</td></tr>
-      <tr><td>i10-index</td><td class="num">{{ cit.i10_index }}</td><td class="num">{{ cit.i10_index_since }}</td></tr>
+      <tr><td>Citations</td><td>{{ cit.total }}</td><td>{{ cit.total_since }}</td></tr>
+      <tr><td>h-index</td><td>{{ cit.h_index }}</td><td>{{ cit.h_index_since }}</td></tr>
+      <tr><td>i10-index</td><td>{{ cit.i10_index }}</td><td>{{ cit.i10_index_since }}</td></tr>
     </table>
-    <div class="scholar__chart">
-      <div class="scholar__bars">
-        {% for y in cit.per_year %}{% assign h = y.count | times: 100 | divided_by: cit.axis_max %}<div class="scholar__bar" style="height: {{ h }}%" title="{{ y.year }}: {{ y.count }} citations"><span class="scholar__val">{{ y.count }}</span></div>{% endfor %}
+    <div class="gs__chart">
+      <div class="gs__plot">
+        <div class="gs__bars">{% for y in cit.per_year %}{% assign h = y.count | times: 100 | divided_by: cit.axis_max %}<div class="gs__col"><div class="gs__bar" style="height: {{ h }}%"><span class="gs__tip">{{ y.count }}</span></div></div>{% endfor %}</div>
+        <div class="gs__years">{% for y in cit.per_year %}<span>{{ y.year }}</span>{% endfor %}</div>
       </div>
-      <div class="scholar__years">{% for y in cit.per_year %}<span>{{ y.year }}</span>{% endfor %}</div>
+      <div class="gs__axis"><span>{{ cit.axis_max }}</span><span>{{ cit.axis_max | times: 3 | divided_by: 4 }}</span><span>{{ cit.axis_max | divided_by: 2 }}</span><span>{{ cit.axis_max | divided_by: 4 }}</span><span>0</span></div>
     </div>
+    <div class="gs__foot">Google Scholar &middot; {{ cit.as_of }}</div>
   </div>
 </div>
-
-<p>
-  <a class="btn-pill" href="https://ui.adsabs.harvard.edu/search/q=orcid%3A%220000-0002-5770-2666%22&amp;sort=date%20desc%2C%20bibcode%20desc&amp;p_=0">Full list on NASA ADS</a>
-  <a class="btn-pill alt" href="https://orcid.org/0000-0002-5770-2666">ORCID</a>
-</p>
 
 <h2>In preparation</h2>
 
