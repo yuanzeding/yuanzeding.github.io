@@ -74,7 +74,7 @@ social:
 # Analytics
 analytics:
   provider               :  "custom" # GoatCounter, see _includes/analytics-providers/custom.html
-  goatcounter            :  "yuanzeding" # dashboard: https://yuanzeding.goatcounter.com (must match the code you registered)
+  goatcounter            :  "dingyuanze" # dashboard: https://dingyuanze.goatcounter.com (must match the code you registered)
   google:
     tracking_id          :  # old Universal Analytics ID removed (Google shut UA down in 2023)
 
