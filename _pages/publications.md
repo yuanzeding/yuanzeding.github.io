@@ -9,10 +9,30 @@ author_profile: true
 {% assign pubs = site.data.publications %}
 {% assign firsts = pubs | where: "first_author", true %}
 
-<div class="pub-stats">
-  <div class="stat"><div class="stat__num">{{ pubs | size }}</div><div class="stat__lbl">Refereed papers</div></div>
-  <div class="stat"><div class="stat__num">{{ firsts | size }}</div><div class="stat__lbl">First-author</div></div>
-  <div class="stat"><div class="stat__num">2021</div><div class="stat__lbl">First paper</div></div>
+{% assign cit = site.data.citations %}
+<div class="pub-overview">
+  <div class="pub-overview__counts pub-stats">
+    <div class="stat"><div class="stat__num">{{ pubs | size }}</div><div class="stat__lbl">Refereed papers</div></div>
+    <div class="stat"><div class="stat__num">{{ firsts | size }}</div><div class="stat__lbl">First-author</div></div>
+  </div>
+  <div class="scholar">
+    <div class="scholar__head">
+      <span>{% if cit.scholar_url != "" %}<a href="{{ cit.scholar_url }}">Cited by</a>{% else %}Cited by{% endif %}</span>
+      <span class="scholar__asof">Google Scholar, {{ cit.as_of }}</span>
+    </div>
+    <table class="scholar__table">
+      <tr><th></th><th>All</th><th>{{ cit.since_label }}</th></tr>
+      <tr><td>Citations</td><td class="num">{{ cit.total }}</td><td class="num">{{ cit.total_since }}</td></tr>
+      <tr><td>h-index</td><td class="num">{{ cit.h_index }}</td><td class="num">{{ cit.h_index_since }}</td></tr>
+      <tr><td>i10-index</td><td class="num">{{ cit.i10_index }}</td><td class="num">{{ cit.i10_index_since }}</td></tr>
+    </table>
+    <div class="scholar__chart">
+      <div class="scholar__bars">
+        {% for y in cit.per_year %}{% assign h = y.count | times: 100 | divided_by: cit.axis_max %}<div class="scholar__bar" style="height: {{ h }}%" title="{{ y.year }}: {{ y.count }} citations"><span class="scholar__val">{{ y.count }}</span></div>{% endfor %}
+      </div>
+      <div class="scholar__years">{% for y in cit.per_year %}<span>{{ y.year }}</span>{% endfor %}</div>
+    </div>
+  </div>
 </div>
 
 <p>

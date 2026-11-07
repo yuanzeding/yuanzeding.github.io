@@ -1,0 +1,20 @@
+# Google Scholar-style citation summary for the Publications page.
+# Update these numbers by hand from Google Scholar (per-year counts read off the
+# Scholar bar chart; they should add up to `total`).
+as_of: "Nov 2026"
+scholar_url: ""          # paste your Google Scholar profile URL here to link the box
+total: 238
+since_label: "Since 2021"
+total_since: 238
+h_index: 9
+h_index_since: 9
+i10_index: 9
+i10_index_since: 9
+axis_max: 100            # top of the bar-chart axis
+per_year:
+  - { year: 2021, count: 1 }
+  - { year: 2022, count: 13 }
+  - { year: 2023, count: 33 }
+  - { year: 2024, count: 40 }
+  - { year: 2025, count: 53 }
+  - { year: 2026, count: 98 }

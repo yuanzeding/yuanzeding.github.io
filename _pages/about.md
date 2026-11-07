@@ -13,13 +13,6 @@ redirect_from:
   <p class="hero__kicker">Ph.D. candidate &middot; Caltech Physics</p>
   <h2 class="hero__title">Black holes, their host galaxies, and the gas around them</h2>
   <p>I am a fifth-year Ph.D. candidate in Physics at Caltech, co-advised by <b>Prof. Charles Steidel</b> and <b>Prof. Fiona Harrison</b>. I use X-ray, optical and near-infrared spectroscopy to study how accreting supermassive black holes shape their environments, from the inner accretion disk out to the circumgalactic medium (CGM).</p>
-  <div class="tag-row">
-    <span class="tag">AGN &amp; CGM at z ~ 2&ndash;3</span>
-    <span class="tag">Keck / KCWI &amp; MOSFIRE</span>
-    <span class="tag">Galaxy mergers</span>
-    <span class="tag">X-ray reflection</span>
-    <span class="tag">AGN outflows</span>
-  </div>
 </div>
 
 My current work centers on the **CGM of AGN at cosmic noon**. I use deep Keck/KCWI integral-field and Keck/MOSFIRE spectroscopy from the Keck Baryonic Structure Survey (KBSS) to map extended Ly&alpha; nebulae around 55 AGN, from hyperluminous QSOs to optically faint broad-line AGN and type-2 AGN. The goal is to see how much of the gas around a galaxy is set by its black hole and how much by the galaxy itself.

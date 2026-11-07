@@ -52,40 +52,32 @@ a:hover { color: $accent-2; }
 
 .hero {
   position: relative;
-  overflow: hidden;
   border-radius: 14px;
-  padding: 2.2em 2em 2em;
+  padding: 1.6em 1.8em 1.2em;
   margin: 0 0 1.8em;
-  color: #e5e7eb;
-  background:
-    radial-gradient(1.5px 1.5px at 12% 22%, rgba(255,255,255,0.9), transparent 60%),
-    radial-gradient(1px 1px at 32% 68%, rgba(255,255,255,0.8), transparent 60%),
-    radial-gradient(1.2px 1.2px at 58% 18%, rgba(255,255,255,0.85), transparent 60%),
-    radial-gradient(1px 1px at 76% 54%, rgba(255,255,255,0.7), transparent 60%),
-    radial-gradient(1.4px 1.4px at 88% 30%, rgba(255,255,255,0.9), transparent 60%),
-    radial-gradient(1px 1px at 46% 84%, rgba(255,255,255,0.6), transparent 60%),
-    radial-gradient(1px 1px at 8% 80%, rgba(255,255,255,0.7), transparent 60%),
-    radial-gradient(ellipse at 85% 110%, rgba(219, 39, 119, 0.55), transparent 55%),
-    radial-gradient(ellipse at 10% -10%, rgba(99, 102, 241, 0.65), transparent 55%),
-    linear-gradient(135deg, #0b1026 0%, #1e1b4b 55%, #312e81 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #f5f7ff 60%, #fdf2f8 100%);
+  border: 1px solid $card-border;
+  border-left: 4px solid $accent;
+  box-shadow: $card-shadow;
 
   .hero__kicker {
     text-transform: uppercase;
     letter-spacing: 0.14em;
     font-size: 0.72em;
-    color: #c7d2fe;
+    font-weight: 600;
+    color: $accent-2;
     margin: 0 0 0.4em;
   }
   .hero__title {
-    font-size: 1.9em;
-    line-height: 1.15;
+    font-size: 1.75em;
+    line-height: 1.2;
     margin: 0 0 0.5em;
-    color: #fff;
+    padding: 0;
+    color: $ink;
     border: none;
     &:after { display: none; }
   }
-  p { color: #e0e7ff; margin-bottom: 0.6em; }
-  a { color: #fbcfe8; }
+  p { color: $text-color; margin-bottom: 0.6em; }
 }
 
 .tag-row { margin: 0.9em 0 0; }
@@ -479,3 +471,118 @@ a.feature {
 p.note,
 .archive p.note,
 .page__content p.note { font-size: 0.75em; color: $muted; margin-top: -0.6em; }
+
+/* ---------- Google-Scholar-style citation box (Publications) ---------- */
+
+.pub-overview {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  margin: 0.5em 0 1.2em;
+  .pub-overview__counts {
+    flex: 0 0 170px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 1em;
+    .stat { flex: 1; margin: 0 0 0.8em 0; }
+    .stat:last-child { margin-bottom: 0; }
+  }
+  .pub-stats { margin: 0; }
+  @media (max-width: 640px) {
+    .pub-overview__counts { flex: 1 1 100%; flex-direction: row; margin: 0 0 0.8em; }
+    .pub-overview__counts .stat { margin: 0 0.8em 0 0; }
+  }
+}
+
+.scholar {
+  flex: 1 1 320px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.9em 1.1em;
+  border: 1px solid $card-border;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: $card-shadow;
+  font-family: $global-font-family;
+
+  .scholar__head {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 0.95em;
+    font-weight: 600;
+    color: $ink;
+    margin-bottom: 0.4em;
+    .scholar__asof { font-size: 0.68em; font-weight: 400; color: $muted; }
+    a { text-decoration: none; }
+  }
+  table.scholar__table {
+    flex: 1 1 170px;
+    display: table;
+    width: auto;
+    margin: 0 1.2em 0.6em 0;
+    border: none;
+    border-collapse: collapse;
+    font-size: 0.8em;
+    th, td {
+      padding: 0.35em 0.5em 0.35em 0;
+      border: none;
+      border-bottom: 1px solid $card-border;
+      text-align: right;
+      color: $ink;
+      white-space: nowrap;
+      background: none;
+    }
+    th { font-weight: 400; color: $muted; }
+    th:first-child, td:first-child { text-align: left; }
+    td.num { font-variant-numeric: tabular-nums; font-weight: 600; }
+  }
+  .scholar__chart {
+    flex: 1 1 200px;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+  }
+  .scholar__bars {
+    position: relative;
+    height: 120px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    border-bottom: 1px solid #d1d5db;
+    background:
+      linear-gradient(to top, transparent calc(25% - 1px), #f1f5f9 25%, transparent calc(25% + 1px)),
+      linear-gradient(to top, transparent calc(50% - 1px), #f1f5f9 50%, transparent calc(50% + 1px)),
+      linear-gradient(to top, transparent calc(75% - 1px), #f1f5f9 75%, transparent calc(75% + 1px)),
+      linear-gradient(to top, transparent calc(100% - 1px), #f1f5f9 100%);
+  }
+  .scholar__bar {
+    position: relative;
+    width: 11%;
+    min-height: 1px;
+    background: linear-gradient(180deg, #6366f1, $accent);
+    border-radius: 3px 3px 0 0;
+    transition: background 0.15s ease;
+    &:hover { background: $accent-2; }
+    .scholar__val {
+      position: absolute;
+      top: -1.35em;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.62em;
+      color: $muted;
+      white-space: nowrap;
+    }
+  }
+  .scholar__years {
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.62em;
+    color: $muted;
+    margin-top: 0.3em;
+    span { width: 11%; text-align: center; }
+  }
+}
+
+.research-figure.research-figure--wide { max-width: none; }
