@@ -19,10 +19,11 @@ My current work centers on the **CGM of AGN at cosmic noon**. I use deep Keck/KC
 
 <!-- My latest work demonstrates that at redshift 2–4, the CGM is more closely correlated with the host galaxies' stellar mass rather than direct supermassive black hole (SMBH) activity, leading to new investigations into whether black hole feedback is more effective at higher redshifts. -->
 
-I have also put substantial work into **KCWI data reduction**, building on the foundations laid by the original developers. My additions to the [KCWI DRP](https://github.com/Keck-DataReductionPipelines/KCWI_DRP), [KcwiKit](https://github.com/yuguangchen1/KcwiKit) and [KSkyWizard](https://github.com/zhuyunz/KSkyWizard) include better cosmic-ray rejection, wavelength corrections, automated sky and source masks, joint frame-to-frame and blue/red alignment to ~0.01&ndash;0.02&Prime; without a point source, and post-DRP sky matching. I have also adapted the [GIST](https://arxiv.org/abs/1906.04746) pipeline to fit combined blue+red KCWI cubes ([details and reduction guide]({{ base_path }}/code_data/)). I am also involved in developing GalfitS, a code that fits multi-band images and SEDs together.
+Alongside the science, I work on the tools behind it. Building on the foundations laid by the original developers, I have made substantial contributions to **KCWI data reduction** through the [KCWI DRP](https://github.com/Keck-DataReductionPipelines/KCWI_DRP), [KcwiKit](https://github.com/yuguangchen1/KcwiKit) and [KSkyWizard](https://github.com/zhuyunz/KSkyWizard): better cosmic-ray rejection, wavelength corrections, automated sky and source masks, joint frame-to-frame and blue/red alignment to ~0.01&ndash;0.02&Prime; without a point source, and post-DRP sky matching. For the analysis that follows, I adapted the [GIST](https://arxiv.org/abs/1906.04746) pipeline to fit combined blue+red KCWI cubes ([details and reduction guide]({{ base_path }}/code_data/)), and I contribute to GalfitS, a code that fits multi-band images and SEDs together.
 
 ## Current work
 
+<div class="feature-wrap">
 <a class="feature card" href="{{ base_path }}/research/#cgm">
   <div class="feature__img"><img src="{{ base_path }}/images/research/cgm_hlqso_nebulae.jpg" alt="Lyman-alpha nebulae around hyperluminous QSOs" loading="lazy"></div>
   <div class="card__body">
@@ -31,6 +32,7 @@ I have also put substantial work into **KCWI data reduction**, building on the f
     <p class="card__text">KCWI finds extended Ly&alpha; around nearly every AGN in the sample, yet nebular luminosity rises only ~15&times; while AGN ionizing output rises 1000&times;. In faint AGN, Ly&alpha; is broader and redder than the Balmer lines, pointing to resonant scattering by dense neutral clumps. Type-2 AGN have brighter, more compact nebulae, which favors a gas-rich evolutionary phase over orientation alone. <i>These results are preliminary.</i></p>
   </div>
 </a>
+</div>
 
 ## Research highlights
 
