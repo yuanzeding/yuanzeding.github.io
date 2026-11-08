@@ -81,6 +81,25 @@ I have also put substantial work into **KCWI data reduction**, building on the f
 
 <p><a class="btn-pill" href="{{ base_path }}/publications/">All publications</a> <a class="btn-pill alt" href="{{ base_path }}/research/">Research details</a> <a class="btn-pill" href="{{ base_path }}/files/cv-yzding.pdf">CV (PDF)</a></p>
 
+## Teaching &amp; mentoring
+
+<div class="card-grid card-grid--2">
+  <div class="card">
+    <div class="card__body">
+      <div class="card__label">Research mentoring &middot; Summer 2025</div>
+      <div class="card__title">Caltech SURF co-advisor</div>
+      <p class="card__text">Co-advised Ricardo Mendez, an undergraduate from Dartmouth College, in Caltech's SURF program. He studied the shapes of the Ly&alpha; nebulae around faint type-2 AGN and compared them with MOSFIRE H&alpha;. The project became his undergraduate thesis, and he has since been admitted to the Ph.D. program at the University of Wisconsin&ndash;Madison.</p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card__body">
+      <div class="card__label">Teaching &middot; Winter 2025&ndash;26</div>
+      <div class="card__title">TA, Ph 77 Advanced Physics Laboratory</div>
+      <p class="card__text">Teaching assistant for Caltech's <a href="https://catalog.caltech.edu/current/2025-26/ph-77-abc">Ph 77</a>, the advanced undergraduate lab course that prepares students for experimental physics research.</p>
+    </div>
+  </div>
+</div>
+
 ## Contact
 
 <i class="fas fa-envelope"></i> [yding@caltech.edu](mailto:yding@caltech.edu) &nbsp;&middot;&nbsp; Cahill Center for Astronomy &amp; Astrophysics, Caltech, Pasadena, CA

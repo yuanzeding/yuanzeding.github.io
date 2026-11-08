@@ -78,7 +78,13 @@ author_profile: true
   <div class="research-block__text">
     <span class="status published">Published &middot; ApJ 2024</span>
     <p>The X-ray spectra of accreting black holes carry a reflection signature (the Fe K line and the Compton hump) that encodes black hole spin, disk inclination and the geometry of the corona. Disks around black holes can reach densities of 10<sup>15</sup>&ndash;10<sup>22</sup> cm<sup>-3</sup>, where plasma effects matter, but most reflection models have ignored them.</p>
-    <p>Working with J. García, T. Kallman and collaborators, the developers of <b>XSTAR</b> and <b>XILLVER</b>, I <a href="https://doi.org/10.3847/1538-4357/ad76a1">added high-density corrections</a> to the atomic rates these codes use. Modified recombination rates cause most of the change. Dense disks can produce strong Fe and O resonance features even when highly ionized, which could explain the <b>supersolar iron abundances</b> reported for many sources.</p>
+    <p>Working with J. García, T. Kallman and collaborators, the developers of <b>XSTAR</b> and <b>XILLVER</b>, I re-examined NASA's XSTAR photoionization code, which XILLVER is built on. Before this work XSTAR became unreliable above ~10<sup>15</sup> cm<sup>-3</sup>. I found and fixed:</p>
+    <ul>
+      <li>a long-standing error in the K-shell photoionization cross sections of Ca&nbsp;XIV and Ca&nbsp;XV, which were much larger than physically expected</li>
+      <li>an initialization flaw that let uninitialized arrays produce unpredictable results in some configurations</li>
+    </ul>
+    <p>I also added <a href="https://doi.org/10.3847/1538-4357/ad76a1">high-density plasma corrections</a> to the atomic rates, of which the modified recombination rates matter most. Together these let XSTAR model the dense gas of accretion disks, beyond 10<sup>21</sup> cm<sup>-3</sup>.</p>
+    <p>On top of the improved XSTAR, I led the development of the <b>next generation of the XILLVER reflection model</b>. Dense disks produce strong Fe and O resonance features even when highly ionized, which could explain the <b>supersolar iron abundances</b> reported for many sources and give more realistic black hole spins and disk compositions. The improvements are part of the XSTAR software distributed by NASA's HEASARC, for interpreting data from Chandra, NuSTAR, NICER and XRISM.</p>
   </div>
 </div>
 

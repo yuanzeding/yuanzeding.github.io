@@ -594,3 +594,37 @@ p.note,
 }
 
 .research-figure.research-figure--wide { max-width: none; }
+
+/* ---------- reduction outcomes (Code/Data) ---------- */
+
+.outcomes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 0.8em;
+  gap: 0.8em;
+  margin: 0.4em 0 1.6em;
+}
+.outcome {
+  position: relative;
+  padding: 0.85em 1em 0.8em 2.5em;
+  border: 1px solid $card-border;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #fff, #fafaff);
+  &:before {
+    content: "\2713";
+    position: absolute;
+    left: 0.9em;
+    top: 0.85em;
+    width: 1.2em;
+    height: 1.2em;
+    line-height: 1.2em;
+    text-align: center;
+    font-size: 0.85em;
+    font-weight: 700;
+    border-radius: 50%;
+    background: #ecfdf5;
+    color: #047857;
+  }
+  .outcome__title { font-weight: 700; color: $ink; font-size: 0.9em; margin-bottom: 0.2em; }
+  p { font-size: 0.78em; color: $muted; margin: 0; line-height: 1.5; }
+}

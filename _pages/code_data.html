@@ -22,12 +22,12 @@ author_profile: true
   <li><span class="flow__n">6</span><span class="flow__t">Check &amp; analyze</span><span class="flow__s">blue vs red registration, then GIST/pPXF maps</span></li>
 </ol>
 
-<div class="pub-stats">
-  <div class="stat"><div class="stat__num">5 mas</div><div class="stat__lbl">blue&ndash;red offset after re-alignment (was 200 mas)</div></div>
-  <div class="stat"><div class="stat__num">&lt; 1 mas</div><div class="stat__lbl">frame-to-frame agreement (worst frame was 0.44&Prime; off)</div></div>
-  <div class="stat"><div class="stat__num">&gt; 2&sigma;</div><div class="stat__lbl">CR residuals effectively all removed (7-frame stack)</div></div>
+<div class="outcomes">
+  <div class="outcome"><div class="outcome__title">Blue&ndash;red mismatch solved</div><p>The background and registration differences between the blue and red channels are removed, so the two halves of each spectrum join cleanly.</p></div>
+  <div class="outcome"><div class="outcome__title">Cosmic rays cleaned</div><p>A new rejection method removes all cosmic-ray residuals above 2&sigma; from the final stacks.</p></div>
+  <div class="outcome"><div class="outcome__title">~10&times; better alignment</div><p>Frame-to-frame alignment is about an order of magnitude more accurate, even for extended or extremely faint sources with no point source to align on.</p></div>
+  <div class="outcome"><div class="outcome__title">Faster reduction</div><p>Automatic sky and source masks replace hand-drawn regions, cutting the hands-on time of a reduction considerably.</p></div>
 </div>
-<p class="note">Alignment numbers are for the Mrk 248 stacks, comparing the old per-channel alignment with the new joint one. Alignment and cosmic-ray tools were also validated on synthetic KCWI frames.</p>
 
 <div class="card-grid">
   <div class="card">
@@ -81,12 +81,29 @@ author_profile: true
 
 <h2>X-ray reflection models</h2>
 
-<div class="card-grid">
+<div class="card-grid card-grid--2">
   <div class="card">
     <div class="card__body">
-      <div class="card__label">Spectral models</div>
-      <div class="card__title"><a href="https://sites.srl.caltech.edu/~javier/xillver/">XILLVER / XSTAR</a></div>
-      <p class="card__text">Reflection and photoionization models for accreting black holes, developed by J. García, T. Kallman and collaborators. I implemented the high-density plasma corrections to the atomic rates (<a href="https://doi.org/10.3847/1538-4357/ad76a1">Ding et al. 2024</a>).</p>
+      <div class="card__label">Photoionization code</div>
+      <div class="card__title"><a href="https://heasarc.gsfc.nasa.gov/docs/software/xstar/xstar.html">XSTAR</a></div>
+      <p class="card__text">NASA's code for photoionized plasmas, developed by T. Kallman and collaborators. My contributions make it accurate and stable at accretion-disk densities (&gt; 10<sup>15</sup> cm<sup>-3</sup>, up to beyond 10<sup>21</sup> cm<sup>-3</sup>):</p>
+      <ul class="card__list">
+        <li>Fixed a long-standing error in the Ca&nbsp;XIV/XV K-shell photoionization cross sections</li>
+        <li>Fixed an initialization flaw that let uninitialized arrays cause unpredictable errors</li>
+        <li>Added high-density plasma corrections to the atomic rates (notably recombination)</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card__body">
+      <div class="card__label">Reflection model</div>
+      <div class="card__title"><a href="https://sites.srl.caltech.edu/~javier/xillver/">XILLVER</a>, high-density version</div>
+      <p class="card__text">The XILLVER/RELXILL reflection models were developed by J. García and collaborators. I led the development of the next-generation, high-density XILLVER built on the improved XSTAR (<a href="https://doi.org/10.3847/1538-4357/ad76a1">Ding et al. 2024</a>):</p>
+      <ul class="card__list">
+        <li>Predicts stronger Fe K and O resonance features from dense disks</li>
+        <li>Offers a physical explanation for apparently supersolar iron abundances</li>
+        <li>Aims at more realistic black hole spin and disk-composition estimates</li>
+      </ul>
     </div>
   </div>
 </div>
