@@ -628,3 +628,57 @@ p.note,
   .outcome__title { font-weight: 700; color: $ink; font-size: 0.9em; margin-bottom: 0.2em; }
   p { font-size: 0.78em; color: $muted; margin: 0; line-height: 1.5; }
 }
+
+/* ---------- Beyond Research page ---------- */
+
+.photo-strip {
+  display: grid;
+  grid-template-columns: 1.3fr 1.3fr 0.95fr;
+  grid-gap: 0.9em;
+  gap: 0.9em;
+  align-items: start;
+  margin: 0.6em 0 1.8em;
+  @media (max-width: 760px) { grid-template-columns: 1fr; }
+}
+.photo {
+  margin: 0;
+  padding: 0.5em 0.5em 0.7em;
+  background: #fff;
+  border: 1px solid $card-border;
+  border-radius: 6px;
+  box-shadow: $card-shadow;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  &:nth-child(1) { transform: rotate(-1.2deg); }
+  &:nth-child(2) { transform: rotate(0.8deg); }
+  &:nth-child(3) { transform: rotate(-0.6deg); }
+  &:hover { transform: rotate(0deg) scale(1.02); box-shadow: $card-shadow-h; z-index: 1; position: relative; }
+  img { display: block; width: 100%; border-radius: 3px; }
+  figcaption {
+    font-family: $global-font-family;
+    font-size: 0.72em;
+    color: $muted;
+    line-height: 1.4;
+    margin-top: 0.5em;
+    font-style: italic;
+  }
+}
+
+.interest {
+  display: flex;
+  align-items: flex-start;
+  margin: 0 0 1.4em;
+  .interest__icon {
+    flex: 0 0 2.4em;
+    height: 2.4em;
+    line-height: 2.4em;
+    text-align: center;
+    border-radius: 50%;
+    background: $accent-light;
+    color: $accent;
+    font-size: 1.1em;
+    margin: 0.2em 1em 0 0;
+  }
+  .interest__body { flex: 1; }
+  .interest__body h2 { margin-top: 0.1em; }
+  .interest__body p { font-size: 0.95em; }
+}
